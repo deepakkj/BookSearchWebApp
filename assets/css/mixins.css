@@ -1,0 +1,59 @@
+/*
+
+WRITE ALL THE MIXINS CODE HERE
+
+*/
+/*
+
+WRITE ALL THE VARIABLES USED IN THE SCSS FILES HERE
+
+*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700,900,500);
+/*
+
+INCLUDE ALL THE GLOBAL AND COMMON STYLES THAT ARE TO BE USED IN THE SITE
+
+*/
+/*
+
+WRITE ALL THE VARIABLES USED IN THE SCSS FILES HERE
+
+*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700,900,500);
+h1, h2, h3, h4, h4, h5, h6, small {
+  margin: 0;
+  padding: 0; }
+
+h1 {
+  font-size: 48px; }
+
+h2 {
+  font-size: 40px; }
+
+h3 {
+  font-size: 36px; }
+
+h4 {
+  font-size: 28px; }
+
+h5 {
+  font-size: 24px; }
+
+h6 {
+  font-size: 20px; }
+
+p {
+  font-size: 18px;
+  margin-bottom: 10px; }
+
+small {
+  font-size: 14px; }
+
+button, input {
+  border-radius: 0 !important; }
+
+.transparent-background {
+  background-color: transparent;
+  zoom: 1; }
+
+/*# sourceMappingURL=mixins.css.map */

@@ -1,0 +1,364 @@
+/*
+
+BOOKHUB SITE SCSS
+
+*/
+/*
+
+WRITE ALL THE VARIABLES USED IN THE SCSS FILES HERE
+
+*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700,900,500);
+/*
+
+INCLUDE ALL THE GLOBAL AND COMMON STYLES THAT ARE TO BE USED IN THE SITE
+
+*/
+/*
+
+WRITE ALL THE VARIABLES USED IN THE SCSS FILES HERE
+
+*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700,900,500);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700,900,500);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700,900,500);
+h1, h2, h3, h4, h4, h5, h6, small {
+  margin: 0;
+  padding: 0; }
+
+h1 {
+  font-size: 48px; }
+
+h2 {
+  font-size: 40px; }
+
+h3 {
+  font-size: 36px; }
+
+h4 {
+  font-size: 28px; }
+
+h5 {
+  font-size: 24px; }
+
+h6 {
+  font-size: 20px; }
+
+p {
+  font-size: 18px;
+  margin-bottom: 10px; }
+
+small {
+  font-size: 14px; }
+
+button, input {
+  border-radius: 0 !important; }
+
+/*
+
+WRITE ALL THE MIXINS CODE HERE
+
+*/
+/*
+
+WRITE ALL THE VARIABLES USED IN THE SCSS FILES HERE
+
+*/
+/*
+
+INCLUDE ALL THE GLOBAL AND COMMON STYLES THAT ARE TO BE USED IN THE SITE
+
+*/
+/*
+
+WRITE ALL THE VARIABLES USED IN THE SCSS FILES HERE
+
+*/
+h1, h2, h3, h4, h4, h5, h6, small {
+  margin: 0;
+  padding: 0; }
+
+h1 {
+  font-size: 48px; }
+
+h2 {
+  font-size: 40px; }
+
+h3 {
+  font-size: 36px; }
+
+h4 {
+  font-size: 28px; }
+
+h5 {
+  font-size: 24px; }
+
+h6 {
+  font-size: 20px; }
+
+p {
+  font-size: 18px;
+  margin-bottom: 10px; }
+
+small {
+  font-size: 14px; }
+
+button, input {
+  border-radius: 0 !important; }
+
+.transparent-background, .navbar {
+  background-color: transparent;
+  zoom: 1; }
+
+/*
+
+INCLUDE ALL ANIMATIONS AND TRANSITIONS EFFECTS HERE
+
+*/
+html, body {
+  background-color: #fff;
+  margin: 0;
+  height: 100%; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #4a4a4a; }
+
+/*SCROLL BAR STYLES START*/
+::-webkit-scrollbar {
+  width: 6px; }
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.05); }
+
+/*SCROLL BAR STYLES END*/
+/*NAVBAR STYLES START*/
+.navbar {
+  border-bottom: 1px solid #6c7a89;
+  background-color: #fff; }
+  .navbar .navbar-right {
+    padding: 15px; }
+    .navbar .navbar-right li:first-child {
+      border-right: 1px solid #ccc;
+      padding-right: 15px; }
+    .navbar .navbar-right li:last-child {
+      padding-left: 15px; }
+
+/*NAVBAR STYLES END*/
+/*SEARCH AND LIST BOOKMARK STYLES START*/
+.left-search-listbookmark .btn-listbookmarks {
+  margin-left: -15px;
+  border: 1px solid #019875;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -o-border-radius: 1px;
+  border-radius: 1px;
+  color: #019875;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background: #fff; }
+  .left-search-listbookmark .btn-listbookmarks:hover {
+    color: #fff;
+    background: #019875;
+    text-decoration: none; }
+  .left-search-listbookmark .btn-listbookmarks:active {
+    color: #fff;
+    background: #019875;
+    text-decoration: none; }
+  .left-search-listbookmark .btn-listbookmarks:focus {
+    color: #fff;
+    background: #019875;
+    text-decoration: none; }
+  .left-search-listbookmark .btn-listbookmarks span {
+    padding-right: 10px; }
+
+/*SEARCH AND LIST BOOKMARK STYLES END*/
+/*BOOKS LIST STYLES START*/
+.books-list {
+  height: 400px;
+  overflow-y: scroll; }
+  .books-list li {
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc; }
+    .books-list li a {
+      color: #000;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      -webkit-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      position: relative;
+      clear: both;
+      border-radius: 0; }
+      .books-list li a:hover {
+        color: #000;
+        text-decoration: none; }
+      .books-list li a:active {
+        color: #000;
+        text-decoration: none; }
+      .books-list li a:focus {
+        color: #000;
+        text-decoration: none; }
+      .books-list li a i {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-right: 15px; }
+      .books-list li a .bookName {
+        display: inline-block;
+        width: 75%;
+        padding-left: 30px; }
+      .books-list li a .bookPrice {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 75px; }
+      .books-list li a:after {
+        float: right;
+        top: 50%;
+        transform: translateY(-50%);
+        position: absolute;
+        right: 15px;
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: "\f105"; }
+    .books-list li.active a {
+      background-color: #4ecdc4; }
+    .books-list li.active > a, .books-list li.active > a:focus, .books-list li.active > a:hover {
+      background-color: #4ecdc4; }
+  .books-list > li + li {
+    margin-top: 0; }
+  .books-list li:first-child {
+    border-top: 1px solid #ccc; }
+  .books-list li:last-child {
+    border-bottom: 1px solid #ccc; }
+
+/*BOOKS LIST STYLES END*/
+/*SORT STYLES START*/
+.sort-section .btn-sort.disabled {
+  margin: 15px;
+  opacity: 1;
+  border: 1px solid #019875;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -o-border-radius: 1px;
+  border-radius: 1px;
+  color: #fff;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background: #019875; }
+  .sort-section .btn-sort.disabled:hover {
+    color: #019875;
+    background: #fff;
+    text-decoration: none; }
+  .sort-section .btn-sort.disabled:active {
+    color: #019875;
+    background: #fff;
+    text-decoration: none; }
+  .sort-section .btn-sort.disabled:focus {
+    color: #019875;
+    background: #fff;
+    text-decoration: none; }
+  .sort-section .btn-sort.disabled span {
+    padding-right: 10px; }
+.sort-section .radio-buttons {
+  display: inline-block;
+  padding: 10px 15px;
+  border: 1px solid #019875; }
+  .sort-section .radio-buttons .radio {
+    margin: 0 15px 0 0;
+    padding: 0; }
+    .sort-section .radio-buttons .radio label input {
+      border: 1px solid red; }
+    .sort-section .radio-buttons .radio:last-child {
+      margin-right: 0; }
+
+/*SORT STYLES END*/
+/*BOOK ALL DETAILS STYLES START*/
+.books-details .tab-pane .book-image-container {
+  margin: 0 auto; }
+.books-details .tab-pane .book-details-container .panel {
+  border-radius: 0;
+  border: none;
+  webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15); }
+  .books-details .tab-pane .book-details-container .panel .panel-heading {
+    background: transparent;
+    border: 0 0 1px 0 solid #ccc; }
+    .books-details .tab-pane .book-details-container .panel .panel-heading h6 {
+      font-size: 20px; }
+.books-details .tab-pane .books-description {
+  page-break-inside: 15px; }
+  .books-details .tab-pane .books-description h6 {
+    margin-bottom: 10px; }
+  .books-details .tab-pane .books-description .desc {
+    padding: 15px;
+    background-color: RGBA(0, 0, 0, 0.02); }
+.books-details .tab-pane .btn-share, .books-details .tab-pane .btn-bookmark {
+  margin: 15px;
+  border: 1px solid #019875;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -o-border-radius: 1px;
+  border-radius: 1px;
+  color: #fff;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background: #019875; }
+  .books-details .tab-pane .btn-share:hover, .books-details .tab-pane .btn-bookmark:hover {
+    color: #019875;
+    background: #fff;
+    text-decoration: none; }
+  .books-details .tab-pane .btn-share:active, .books-details .tab-pane .btn-bookmark:active {
+    color: #019875;
+    background: #fff;
+    text-decoration: none; }
+  .books-details .tab-pane .btn-share:focus, .books-details .tab-pane .btn-bookmark:focus {
+    color: #019875;
+    background: #fff;
+    text-decoration: none; }
+  .books-details .tab-pane .btn-share span, .books-details .tab-pane .btn-bookmark span {
+    padding-right: 10px; }
+
+/*BOOK ALL DETAILS STYLES END*/
+.hline {
+  background: #000;
+  height: 1px;
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+.section-title {
+  text-rendering: geometricPrecision;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 300;
+  position: relative;
+  margin-bottom: 30px;
+  word-spacing: 5px; }
+
+.sub-title {
+  text-transform: none;
+  margin-bottom: 30px; }
+
+#footer {
+  background-color: #05f5f5; }
+
+/*# sourceMappingURL=main.css.map */

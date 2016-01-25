@@ -1,0 +1,95 @@
+/*
+
+WRITE ALL THE MIXINS CODE HERE
+
+*/
+
+@import 'variables';
+@import 'common-styles';
+
+
+// BORDER SIZE COLOR & RADIUS START 
+@mixin border-width-color-radius($width, $color, $radius) {
+    border: $width solid $color;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
+} // @include border-width-color-radius(4px, #fff, (2px 5px 10px 8px));
+// BORDER SIZE COLOR & RADIUS END 
+
+// ONLY THE TRANSPARENT BACKGROUND START 
+.transparent-background {
+    background-color: transparent;
+    zoom: 1;
+}
+@mixin transparent($color, $alpha) {
+    $rgba: rgba($color, $alpha);
+    $ie-hex-str: ie-hex-str($rgba);
+    @extend .transparent-background;
+    background-color: $rgba;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str}, endColorstr=#{$ie-hex-str});
+} //@include transparent($very-dark-blue, 0.5);
+// ONLY THE TRANSPARENT BACKGROUND END 
+
+// TRANSITION START 
+@mixin transition($what: all, $length: $animation-time, $easing: ease-in-out) {
+    -moz-transition: $what $length $easing;
+    -o-transition: $what $length $easing;
+    -webkit-transition: $what $length $easing;
+    -ms-transition: $what $length $easing;
+    transition: $what $length $easing;
+}
+// TRANSITION END 
+
+// $color: anchor normal color, $hcolor : hover state, $bgcolor: normal background color, $hbgcolor : hover bgcolor
+// linkColor($color, $hcolor, null)  - if you give null will get default bg color 
+@mixin linkColor($color, $hcolor, $bgcolor, $hbgcolor) {
+    color: $color;
+    @include transition;
+    background: $bgcolor;
+    &:hover {
+        color: $hcolor;
+        background: $hbgcolor;
+        text-decoration: none;
+    }
+    &:active {
+        color: $hcolor;
+        background: $hbgcolor;
+        text-decoration: none;
+    }
+    &:focus {
+        color: $hcolor;
+        background: $hbgcolor;
+        text-decoration: none;
+    }
+} // a{@include linkColor($black, $white, $white, $very-dark-blue);}  // IF YOU NEED TO CHANGE TIMING ADD LINE : transition-duration: 3s; IN MAIN SCSS FILE
+
+// HORIZONTAL LINE STYLES START
+@mixin horizontal-line($bgcolor, $thickness) {
+    background: $bgcolor;
+    height: $thickness;
+} //@include horizontal-line(#ccc, 2px);
+// HORIZONTAL LINE STYLES END
+
+// IMAGE CIRCLE WITH TRANSPARENT BORDER RADIUS START
+@mixin circle-img-border($border-thickness:5px, $widthheight:100px, $padval:5px) {
+    border: solid $border-thickness rgba(255, 255, 255, 0.5);
+    padding: $padval;
+    display: inline-block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    img {
+        display: block;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+        width: $widthheight;
+        height: $widthheight;
+        @include transition;
+    }
+} // @include image-transparent-border(5px, 100px,5px);
+// ONE IMAGE CIRCLE WITH TRANSPARENT BORDER RADIUS END

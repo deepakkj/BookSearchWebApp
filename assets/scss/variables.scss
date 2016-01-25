@@ -1,0 +1,26 @@
+/*
+
+WRITE ALL THE VARIABLES USED IN THE SCSS FILES HERE
+
+*/
+
+
+// light 300, normal 400, medium 500, bold 700, ultrabold 900 - ROBOTO FONT STYLES
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700,900,500);
+
+
+//FONT FAMILY
+$base-font-family: 'Roboto',sans-serif;
+
+//FONT COLORS
+$very-dark-grey: #4a4a4a;	//body base text color
+$white: #fff;
+
+
+
+
+
+
+$animation-time: 0.3s;     // TRANSITION TIMING
+
+

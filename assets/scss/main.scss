@@ -1,0 +1,265 @@
+/*
+
+BOOKHUB SITE SCSS
+
+*/
+
+@import 'variables';
+@import 'common-styles';
+@import 'mixins';
+@import 'animate';
+
+html, body {
+    background-color: $white;
+	margin: 0;
+	height: 100%;
+}
+
+body{
+font-family: $base-font-family;
+font-size: 16px;
+font-weight: 400;
+color: $very-dark-grey;
+}
+/*SCROLL BAR STYLES START*/
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+ 
+::-webkit-scrollbar-track {
+	//background: #ccc;
+    //-webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0.3); 
+   // border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.05);
+	background: rgba(0,0,0,0.05);
+}
+/*SCROLL BAR STYLES END*/
+
+/*NAVBAR STYLES START*/
+.navbar{
+	@extend .transparent-background;
+	border-bottom: 1px solid #6c7a89;
+	background-color: #fff;
+	.nav{
+	
+	}
+	.navbar-right{
+	padding: 15px;
+		li:first-child{
+		border-right: 1px solid #ccc;
+			padding-right: 15px;
+		}
+		li:last-child{
+		padding-left: 15px;
+		}
+	}
+}
+/*NAVBAR STYLES END*/
+
+/*SEARCH AND LIST BOOKMARK STYLES START*/
+.left-search-listbookmark{
+	//Search form styles
+	.search-form{
+		.input-group{
+			input{
+			
+			}
+		}
+	}
+	//List Bookmarks Styles
+	.btn-listbookmarks{
+			margin-left: -15px;
+			@include border-width-color-radius(1px, #019875, (1px));
+			@include linkColor(#019875, #fff, #fff, #019875);
+			span{
+			padding-right: 10px;
+			}
+		}
+}
+/*SEARCH AND LIST BOOKMARK STYLES END*/
+/*BOOKS LIST STYLES START*/
+.books-list{
+	height: 400px;
+	overflow-y: scroll;
+	li{
+		border-bottom: 1px solid #ccc;
+			border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+		a{	
+			@include linkColor(#000, #000, null, null);
+			position: relative;
+    clear: both;
+			border-radius: 0;
+			i{
+    position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				margin-right: 15px;
+			}
+			.bookName{
+				display: inline-block;
+				width: 75%;
+			padding-left: 30px;
+			}
+			.bookPrice{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 75px;
+			}
+			&:after{
+			
+    float: right;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    right: 15px;
+				display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+				content: "\f105";
+			}
+		}
+		&.active a{
+			background-color: #4ecdc4;
+			}
+		&.active>a, &.active>a:focus, &.active>a:hover{
+		background-color: #4ecdc4;
+		}
+	}
+	&>li+li{
+	margin-top: 0;
+	}
+	li:first-child{
+	border-top: 1px solid #ccc;
+	}
+	li:last-child{
+	border-bottom: 1px solid #ccc;
+	}
+}
+/*BOOKS LIST STYLES END*/
+/*SORT STYLES START*/
+	.sort-section{
+		//Share Button and Bookmark Button
+		.btn-sort.disabled{
+			margin: 15px;
+			opacity: 1;
+			@include border-width-color-radius(1px, #019875, (1px));
+			@include linkColor(#fff, #019875, #019875, #fff);
+			span{
+			padding-right: 10px;
+			}
+		}
+		.radio-buttons{
+			display: inline-block;
+			padding: 10px 15px;
+			border: 1px solid #019875;
+		.radio{
+			margin:0 15px 0 0;
+			padding: 0;
+			label{
+			input{
+				border: 1px solid red;
+			}
+			}
+			&:last-child{
+			margin-right: 0;
+			}
+		}
+		}
+	}
+/*SORT STYLES END*/
+/*BOOK ALL DETAILS STYLES START*/
+.books-details{
+	.tab-pane{
+		//Book Image
+		.book-image-container{
+			margin: 0 auto;
+			.book-image{
+
+			}
+		}
+		//Book Details
+		.book-details-container{
+			.panel{
+				border-radius: 0;
+				border:none;
+				webkit-box-shadow: 0 1px 10px rgba(0,0,0,.15);
+    box-shadow: 0 1px 10px rgba(0,0,0,0.15);
+				.panel-heading{
+					background: transparent;
+					border: 0 0 1px 0 solid #ccc;
+					h6{
+					font-size: 20px;
+					}
+				}
+				.panel-body{
+					p{
+					
+					}
+				}
+			}
+		}
+		//Books Descritpion
+		.books-description{
+			page-break-inside: 15px;
+			h6{
+			margin-bottom: 10px;
+			}
+			.desc{
+			padding: 15px;
+			background-color: RGBA(0,0,0,0.02);
+			}
+		}
+		//Share Button and Bookmark Button
+		.btn-share,.btn-bookmark{
+			margin: 15px;
+			@include border-width-color-radius(1px, #019875, (1px));
+			@include linkColor(#fff, #019875, #019875, #fff);
+			span{
+			padding-right: 10px;
+			}
+		}
+	}
+}
+/*BOOK ALL DETAILS STYLES END*/
+
+//Hline
+.hline{
+@include horizontal-line(#000, 1px);
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+.section-title{
+    text-rendering: geometricPrecision;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 300;
+    position: relative;
+    margin-bottom: 30px;
+    word-spacing: 5px;
+}
+.sub-title{
+text-transform: none;
+	margin-bottom: 30px;
+	
+}
+
+
+
+#footer {
+    background-color: #05f5f5;
+}
+
+
+
+@import 'media-queries';
